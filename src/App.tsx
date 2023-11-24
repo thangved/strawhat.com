@@ -12,7 +12,6 @@ const groups = userService.getUsersGroupByGroups();
 
 function App() {
 	const classes = useStyles();
-	const [activeId, setActiveId] = React.useState<number | null>(null);
 
 	return (
 		<div className={classes.wrapper}>
@@ -35,7 +34,7 @@ function App() {
 										<CardMedia
 											image={user.image}
 											sx={{
-												height: activeId === user.id ? 400 : 200,
+												height: 200,
 											}}
 										/>
 										<CardContent>
