@@ -28,8 +28,8 @@ const users: User[] = [
 		description: 'Người chỉ đường',
 		username: 'zoro',
 		image: zoroImage,
-		group: groups[2],
-		position: positions[3],
+		group: groups[1],
+		position: positions[2],
 	},
 	{
 		id: 4,
@@ -37,8 +37,8 @@ const users: User[] = [
 		description: 'Sogeking :))',
 		username: 'usopp',
 		image: usoppImage,
-		group: groups[2],
-		position: positions[4],
+		group: groups[1],
+		position: positions[3],
 	},
 	{
 		id: 5,
@@ -46,8 +46,8 @@ const users: User[] = [
 		description: 'Nhà khảo cổ học',
 		username: 'robin',
 		image: robinImage,
-		group: groups[2],
-		position: positions[4],
+		group: groups[1],
+		position: positions[3],
 	},
 	{
 		id: 6,
@@ -55,8 +55,8 @@ const users: User[] = [
 		description: 'Đầu bếp băng Mũ Rơm',
 		username: 'sanji',
 		image: sanjiImage,
-		group: groups[3],
-		position: positions[3],
+		group: groups[2],
+		position: positions[2],
 	},
 	{
 		id: 7,
@@ -65,7 +65,7 @@ const users: User[] = [
 		username: 'chopper',
 		image: chopperImage,
 		group: groups[2],
-		position: positions[5],
+		position: positions[3],
 	},
 ];
 
