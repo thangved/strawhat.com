@@ -18,7 +18,7 @@ FROM nginx:alpine
 
 COPY --from=production /app/.nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
-WORKDIR /user/share/nginx/html
+WORKDIR /usr/share/nginx/html
 
 RUN rm -rf ./*
 
