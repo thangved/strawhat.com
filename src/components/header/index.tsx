@@ -1,3 +1,5 @@
+import { GitHub } from '@mui/icons-material';
+import { Button, Link } from '@mui/material';
 import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
@@ -12,6 +14,7 @@ const useStyles = createUseStyles({
 		position: 'sticky',
 		top: 0,
 		zIndex: 100,
+		justifyContent: 'space-between',
 	},
 	brand: {
 		margin: '0',
@@ -25,6 +28,10 @@ export default function Header() {
 	return (
 		<div className={classes.wrapper}>
 			<h1 className={classes.brand}>Công ty Strawhat</h1>
+
+			<Link href='https://github.com/thangved/strawhat.com' target='_blank'>
+				<Button startIcon={<GitHub />}>Github</Button>
+			</Link>
 		</div>
 	);
 }

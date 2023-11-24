@@ -1,6 +1,7 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Chip, Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import { createUseStyles } from 'react-jss';
+import Footer from './components/footer';
 import Header from './components/header';
 import userService from './services/user.service';
 
@@ -70,6 +71,8 @@ function App() {
 					</React.Fragment>
 				))}
 			</Container>
+
+			<Footer />
 		</div>
 	);
 }
