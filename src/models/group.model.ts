@@ -1,5 +1,5 @@
-import BaseModel from './base.model';
+import Base from './base.model';
 
-export default interface Group extends BaseModel {
+export default interface Group extends Base {
 	name: string;
 }
