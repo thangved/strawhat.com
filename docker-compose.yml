@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+    strawhat.com:
+        build: .
+        container_name: strawhat.com
+        ports:
+            - '80:80'

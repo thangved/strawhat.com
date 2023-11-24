@@ -1,35 +1,80 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Button, Card, CardActions, CardContent, CardMedia, Chip, Container, Grid, Typography } from '@mui/material';
+import React from 'react';
+import { createUseStyles } from 'react-jss';
+import Footer from './components/footer';
+import Header from './components/header';
+import userService from './services/user.service';
+
+const useStyles = createUseStyles({
+	wrapper: {},
+});
+
+const groups = userService.getUsersGroupByGroups();
 
 function App() {
-  const [count, setCount] = useState(0)
+	const classes = useStyles();
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+	return (
+		<div className={classes.wrapper}>
+			<Header />
+
+			<Container>
+				<Typography component='h2' fontWeight={700} fontSize={24} margin='10px 0'>
+					Giới thiệu công ty
+				</Typography>
+
+				{groups.map((group) => (
+					<React.Fragment key={group.id}>
+						<Typography component='h3' fontWeight={700} fontSize={20} margin='10px 0'>
+							{group.name}
+						</Typography>
+						<Grid container spacing={2}>
+							{group.users.map((user) => (
+								<Grid item xs={12} sm={6} md={4} lg={3} key={user.id}>
+									<Card variant='outlined'>
+										<CardMedia
+											image={user.image}
+											sx={{
+												aspectRatio: 1,
+											}}
+										/>
+										<CardContent>
+											<Typography
+												component='div'
+												fontWeight={700}
+												fontSize={16}
+												margin='10px 0'
+												display='flex'
+												gap={1}
+												alignItems='center'
+											>
+												<Chip
+													label={user.position.name}
+													color='primary'
+													variant='outlined'
+													size='small'
+												/>
+												{user.fullName}
+											</Typography>
+
+											<Typography component='p' fontWeight={400} fontSize={14} margin='10px 0'>
+												{user.description}
+											</Typography>
+										</CardContent>
+										<CardActions>
+											<Button variant='contained'>Learn More</Button>
+										</CardActions>
+									</Card>
+								</Grid>
+							))}
+						</Grid>
+					</React.Fragment>
+				))}
+			</Container>
+
+			<Footer />
+		</div>
+	);
 }
 
-export default App
+export default App;
