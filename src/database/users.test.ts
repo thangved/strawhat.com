@@ -12,6 +12,7 @@ describe('Users', () => {
 			expect(group).toHaveProperty('fullName');
 			expect(group).toHaveProperty('username');
 			expect(group).toHaveProperty('description');
+			expect(group).toHaveProperty('image');
 			expect(group).toHaveProperty('group');
 			expect(group).toHaveProperty('position');
 		}

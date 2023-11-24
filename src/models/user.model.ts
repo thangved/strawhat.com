@@ -6,6 +6,7 @@ export default interface User extends Base {
 	fullName: string;
 	username: string;
 	description: string;
+	image: string;
 	group: Group;
 	position: Position;
 }
