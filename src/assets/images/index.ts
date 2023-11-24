@@ -1,4 +1,5 @@
 export { default as chopperImage } from './chopper.jpg';
+export { default as logoImage } from './logo.png';
 export { default as luffyImage } from './luffy.jpg';
 export { default as namiImage } from './nami.jpg';
 export { default as robinImage } from './robin.webp';
