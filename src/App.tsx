@@ -34,7 +34,7 @@ function App() {
 										<CardMedia
 											image={user.image}
 											sx={{
-												height: 200,
+												aspectRatio: 1,
 											}}
 										/>
 										<CardContent>
@@ -61,9 +61,7 @@ function App() {
 											</Typography>
 										</CardContent>
 										<CardActions>
-											<Button variant='contained' onClick={() => setActiveId(user.id)}>
-												Learn More
-											</Button>
+											<Button variant='contained'>Learn More</Button>
 										</CardActions>
 									</Card>
 								</Grid>

@@ -9,6 +9,9 @@ const useStyles = createUseStyles({
 		display: 'flex',
 		alignItems: 'center',
 		padding: '0 16px',
+		position: 'sticky',
+		top: 0,
+		zIndex: 100,
 	},
 	brand: {
 		margin: '0',
