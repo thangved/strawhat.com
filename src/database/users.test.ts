@@ -7,14 +7,15 @@ describe('Users', () => {
 	});
 
 	it('Should be any users have properties', () => {
-		for (const group of users) {
-			expect(group).toHaveProperty('id');
-			expect(group).toHaveProperty('fullName');
-			expect(group).toHaveProperty('username');
-			expect(group).toHaveProperty('description');
-			expect(group).toHaveProperty('image');
-			expect(group).toHaveProperty('group');
-			expect(group).toHaveProperty('position');
+		for (const user of users) {
+			expect(user).toHaveProperty('id');
+			expect(user).toHaveProperty('fullName');
+			expect(user).toHaveProperty('username');
+			expect(user).toHaveProperty('description');
+			expect(user).toHaveProperty('image');
+
+			expect(user.group).not.toBeUndefined();
+			expect(user.position).not.toBeUndefined();
 		}
 	});
 });
